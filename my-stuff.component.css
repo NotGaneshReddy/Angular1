@@ -1,0 +1,88 @@
+/* Style the main container */
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(225, 66, 66, 0.8); /* Semi-transparent white background */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+}
+
+/* Style the search bar and button */
+.container input[type="text"] {
+  padding: 10px;
+  width: 70%;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.container button {
+  padding: 10px;
+  background-color: #4caf50; /* Green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container button:hover {
+  background-color: #a06645;
+}
+
+/* Style the user details section */
+.user-details {
+  margin-top: 20px;
+}
+
+.user-details div {
+  margin-bottom: 10px;
+}
+
+/* Style the user list section */
+.user-list {
+  margin-top: 20px;
+}
+
+.user-list div {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* Style the Add User section */
+.add-user {
+  margin-top: 20px;
+}
+
+.add-user label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.add-user input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-user button {
+  padding: 10px;
+  background-color: #2196F3; /* Blue */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-user button:hover {
+  background-color: #0b7dda;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+  .container input[type="text"] {
+    width: 100%;
+  }
+}

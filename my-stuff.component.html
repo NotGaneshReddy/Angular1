@@ -1,0 +1,37 @@
+<div>
+  <input type="text" placeholder="Search by username" [(ngModel)]="searchTerm" />
+  <button (click)="searchUsers()">Search</button>
+  <!-- Display the userUnavailableMessage if it's not an empty string -->
+  <div *ngIf="userUnavailableMessage">
+    {{ userUnavailableMessage }}
+  </div>
+</div>
+
+<div *ngIf="searchTerm && selectedUser.username">
+  <div>
+    <strong>{{ selectedUser.username }}</strong>
+    <p>ID: {{ selectedUser.id }}</p>
+    <p>Name: {{ selectedUser.name }}</p>
+    <p>Email: {{ selectedUser.email }}</p>
+    <p>Address: {{ selectedUser.address.city }}, {{ selectedUser.address.street }}, {{ selectedUser.address.suite }}, {{ selectedUser.address.zipcode }}</p>
+  </div>
+</div>
+
+<div *ngIf="searchTerm && !selectedUser.username">
+  <div *ngFor="let user of users; let i = index">
+    <div>
+      <strong (click)="selectUser(user)">{{ user.username }}</strong>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!searchTerm">
+  <!-- Display nothing when searchTerm is empty  -->
+</div>
+
+<div>
+  <h3>Add User</h3>
+  <label>Username: <input type="text" [(ngModel)]="newUser.username" /></label>
+  <label>Email: <input type="text" [(ngModel)]="newUser.email" /></label>
+  <button (click)="addUser()">Add User</button>
+</div>
